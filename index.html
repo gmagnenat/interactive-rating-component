@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Rating Component</title>
+    <script type="module" defer src="/src/main.ts"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/scss/main.scss" />
+  </head>
+  <body>
+    <!-- Rating state start -->
+    <main class="rating-card">
+      <div class="rating-state --active">
+        <form class="form" novalidate>
+          <div class="icon-star">
+            <img src="./images/icon-star.svg" alt="" />
+          </div>
+          <h2 class="rating-card__heading">How did we do?</h2>
+          <p class="rating-card__message">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+          <fieldset class="rating-fieldset">
+            <legend class="sr-only">Rate us from 1 to 5</legend>
+            <div
+              class="rating__inputs"
+              aria-label="Rating options"
+              role="radiogroup"
+            >
+              <div class="form-group">
+                <input
+                  type="radio"
+                  name="rating"
+                  id="rating-1"
+                  value="1"
+                  required
+                />
+                <label for="rating-1">1</label>
+              </div>
+              <div class="form-group">
+                <input type="radio" name="rating" id="rating-2" value="2" />
+                <label for="rating-2">2</label>
+              </div>
+              <div class="form-group">
+                <input type="radio" name="rating" id="rating-3" value="3" />
+                <label for="rating-3">3</label>
+              </div>
+              <div class="form-group">
+                <input type="radio" name="rating" id="rating-4" value="4" />
+                <label for="rating-4">4</label>
+              </div>
+              <div class="form-group">
+                <input type="radio" name="rating" id="rating-5" value="5" />
+                <label for="rating-5">5</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <button class="btn btn--primary rating-btn">Submit</button>
+          <div
+            id="validation-message"
+            class="validation-message"
+            aria-live="assertive"
+          ></div>
+        </form>
+      </div>
+
+      <div aria-live="assertive">
+        <div class="thank-you-state">
+          <h2 class="thank-you__heading" tabindex="-1">Thank you!</h2>
+          <img
+            class="thank-you__image"
+            src="./images/illustration-thank-you.svg"
+            alt=""
+          />
+          <p class="thank-you__overline">
+            You selected <span class="selected-value"></span> out of 5
+          </p>
+          <p class="thank-you__message">
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

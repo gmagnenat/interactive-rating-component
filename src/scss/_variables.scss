@@ -1,0 +1,15 @@
+$clr-base-900: #131518;
+$clr-base-800: #262e38;
+$clr-base-200: #969fad;
+$clr-base-100: #ffffff;
+$clr-primary: #fc7614;
+
+$ff: "Overpass", sans-serif;
+$fs-title: clamp(1.5rem, calc(1.5rem + ((1vw - 0.2rem) * 0.4167)), 1.75rem);
+$fs-body: clamp(
+  0.875rem,
+  calc(0.875rem + ((1vw - 0.2rem) * 0.1042)),
+  0.9375rem
+);
+
+$pad-s: clamp(1.5rem, calc(1.5rem + ((1vw - 0.2rem) * 0.8333)), 2rem);
