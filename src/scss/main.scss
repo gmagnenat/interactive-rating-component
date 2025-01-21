@@ -60,6 +60,10 @@ body {
   font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.2rem) * 0.4167)), 1.75rem);
   margin-top: 1rem;
   color: $clr-base-100;
+
+  @media screen and (min-width: 40rem) {
+    margin-top: 1.875rem;
+  }
 }
 
 .rating-card__message {
