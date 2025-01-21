@@ -102,6 +102,10 @@ function initializeRatingForm(elements: RatingElements): void {
   });
 }
 
+/**
+ * Check if the current URL contains "thank-you".
+ * Reload the page if it does and reset the form
+ */
 function checkPageUrl(): void {
   const currentPath = window.location.pathname;
 
