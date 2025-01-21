@@ -102,6 +102,16 @@ function initializeRatingForm(elements: RatingElements): void {
   });
 }
 
+function checkPageUrl(): void {
+  const currentPath = window.location.pathname;
+
+  if (currentPath.includes("thank-you")) {
+    window.history.replaceState(null, "", "/");
+    const elements = getDOMElements();
+    elements.form.reset();
+  }
+}
+
 // Handle browser back button and make sure to reset the form in case of redirection issue.
 // This is a workaround for the issue where the form is not reset when the back button is clicked.
 window.addEventListener("popstate", () => {
@@ -117,6 +127,7 @@ try {
     handleSubmit(event, elements)
   );
   initializeRatingForm(elements);
+  checkPageUrl();
 } catch (error) {
   console.error("Failed to initialize rating component:", error);
 }
