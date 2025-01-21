@@ -65,7 +65,6 @@ function handleSubmit(event: SubmitEvent, elements: RatingElements): void {
   if (!rating) {
     elements.validationMessage.classList.add(CSS_CLASSES.ACTIVE);
     elements.validationMessage.innerHTML = `<p>Please select a rating</p>`;
-    elements.ratingInputs.focus();
     throw new Error("No rating selected");
   }
 

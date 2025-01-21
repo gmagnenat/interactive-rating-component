@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/gmagnenat/interactive-rating-component](https://github.com/gmagnenat/interactive-rating-component)
+- Live Site URL: [https://clever-hotteok-1d1505.netlify.app/](https://clever-hotteok-1d1505.netlify.app/)
 
 ## My process
 
